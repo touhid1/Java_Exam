@@ -1,27 +1,27 @@
 public class BankAccount {
     private String accountNumber;
     private double balance;
-
+// Constructor
     public BankAccount(String accountNumber, double initialBalance) {
         this.accountNumber = accountNumber;
         this.balance = initialBalance;
     }
-
+// Getter for account number
     public String getAccountNumber() {
         return accountNumber;
     }
-
+// Getter for balance
     public double getBalance() {
         return balance;
     }
-
+// Deposit method with exception handling
     public void deposit(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Deposit amount must be positive");
         }
         balance += amount;
     }
-
+// Withdraw method with exception handling
     public void withdraw(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Withdrawal amount must be positive");
@@ -31,7 +31,7 @@ public class BankAccount {
         }
         balance -= amount;
     }
-
+// Main method to demonstrate functionality
     public static void main(String[] args) {
         BankAccount account = new BankAccount("123456789", 1000.0);
 
